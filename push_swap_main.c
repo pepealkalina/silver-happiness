@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   push_swap_main.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: preina-g <preina-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/31 12:31:17 by preina-g          #+#    #+#             */
-/*   Updated: 2023/02/22 16:09:28 by preina-g         ###   ########.fr       */
+/*   Created: 2023/02/15 13:03:01 by preina-g          #+#    #+#             */
+/*   Updated: 2023/02/22 12:13:38 by preina-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdio.h>
 
-int	main(int argc, char **argv)
+int	push_swap_main(t_data *data)
 {
-	t_data	data;
-	int i = 0;
-	if (argc < 2)
-		exit(write(1, "Error! No input\n", 16));
-	else if (ft_check_input(argv, argc, &data) == FALSE)
-		return (-1);
-	else
+	t_stack	*stack_a;
+
+	stack_a = ft_fill_stack(data, stack_a);
+	while (stack_a)
 	{
-		if (data.num_list == NULL)
-			return (-1);
-		push_swap_main(&data);
+		printf("%i\n", stack_a->value);
+		stack_a = stack_a->next;
 	}
 	return (0);
 }

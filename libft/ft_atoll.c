@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_atoll.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: preina-g <preina-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/20 10:47:33 by preina-g          #+#    #+#             */
-/*   Updated: 2023/02/13 13:09:35 by preina-g         ###   ########.fr       */
+/*   Created: 2023/02/21 11:28:41 by preina-g          #+#    #+#             */
+/*   Updated: 2023/02/21 11:29:31 by preina-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_putnbr(const char *str, int i)
+static long long	ft_putnbr(const char *str, long long i)
 {
 	int	num;
 
@@ -25,11 +25,11 @@ static int	ft_putnbr(const char *str, int i)
 	return (num);
 }
 
-int	ft_atoi(const char *str)
+long long	ft_atoll(const char *str)
 {
-	int	i;
-	int	nb;
-	int	num;
+	int			i;
+	long long	nb;
+	long long	num;
 
 	num = 0;
 	nb = 1;

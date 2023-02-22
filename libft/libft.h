@@ -6,7 +6,7 @@
 /*   By: preina-g <preina-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 10:58:34 by preina-g          #+#    #+#             */
-/*   Updated: 2022/10/04 10:52:19 by preina-g         ###   ########.fr       */
+/*   Updated: 2023/02/13 13:09:22 by preina-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ typedef struct s_list
 }	t_list;
 
 int			ft_atoi(const char *str);
+long long	ft_atoll(const char *str);
 void		*ft_bzero(void *s, size_t n);
 int			ft_isalpha(int argument);
 int			ft_isalnum(int argument);
