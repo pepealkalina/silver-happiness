@@ -6,7 +6,7 @@
 /*   By: preina-g <preina-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 12:31:17 by preina-g          #+#    #+#             */
-/*   Updated: 2023/02/22 16:09:28 by preina-g         ###   ########.fr       */
+/*   Updated: 2023/03/01 17:54:03 by preina-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 int	main(int argc, char **argv)
 {
 	t_data	data;
-	int i = 0;
+
 	if (argc < 2)
 		exit(write(1, "Error! No input\n", 16));
 	else if (ft_check_input(argv, argc, &data) == FALSE)

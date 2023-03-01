@@ -6,7 +6,7 @@
 /*   By: preina-g <preina-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 11:37:03 by preina-g          #+#    #+#             */
-/*   Updated: 2023/02/22 16:08:53 by preina-g         ###   ########.fr       */
+/*   Updated: 2023/03/01 10:07:22 by preina-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,11 @@ int	ft_check_input(char **argv, int argc, t_data *data)
 			write(1, "Error! sda", 10);
 			return (FALSE);
 		}
-		else if (ft_check_dup(argv, argc) == FALSE)
+		else if (ft_check_dup(argv, argc, data) == FALSE)
 		{
 			write(1, "Error! ave", 10);
 			return (FALSE);
 		}
 	}
-	data->num_list = ft_atoi_input(argv, argc);
 	return (TRUE);
 }

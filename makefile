@@ -6,7 +6,7 @@
 #    By: preina-g <preina-g@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/31 15:13:40 by preina-g          #+#    #+#              #
-#    Updated: 2023/02/20 13:36:59 by preina-g         ###   ########.fr        #
+#    Updated: 2023/03/01 17:55:41 by preina-g         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	@make -C libft -s
 	@make bonus -C libft -s
-	$(CC) $(CCFLAGS) $(OBJ) $(LIBFT) -o $(NAME) -g
+	$(CC) $(CCFLAGS) $(SRC) $(LIBFT) -o $(NAME) -g
 
 clean:
 	@make clean -C libft -s

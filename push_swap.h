@@ -6,7 +6,7 @@
 /*   By: preina-g <preina-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 11:37:33 by preina-g          #+#    #+#             */
-/*   Updated: 2023/02/21 11:08:58 by preina-g         ###   ########.fr       */
+/*   Updated: 2023/03/01 10:07:04 by preina-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ typedef struct s_data
 int		ft_is_num(char **argv);
 int		ft_check_input(char **argv, int argc, t_data *data);
 int		*ft_atoi_input(char **argv, int argc);
-int		ft_check_dup(char **argv, int argc);
+int		ft_check_dup(char **argv, int argc, t_data *data);
 void	ft_split_argv(char *argv, t_data *data);
 int		push_swap_main(t_data *data);
 t_stack	*ft_fill_stack(t_data *data, t_stack *stack);

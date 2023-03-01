@@ -6,7 +6,7 @@
 /*   By: preina-g <preina-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 11:37:05 by preina-g          #+#    #+#             */
-/*   Updated: 2023/02/22 12:12:30 by preina-g         ###   ########.fr       */
+/*   Updated: 2023/03/01 18:03:38 by preina-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,14 +39,16 @@ int	ft_is_num(char **argv)
 
 int	ft_is_int(char *num)
 {
-	long	max;
-	long	min;
+	long long	max;
+	long long	min;
+	long long	nb;
 
-	max = 2147483647;
-	min = -2147483648;
-	if (ft_atoll(num) > max || ft_atoll(num) < min)
-		return (FALSE);
-	return (ft_atoll(num));
+	max = 2147483648;
+	min = -2147483649;
+	nb = ft_atoll(num);
+	if (nb >= max || nb <= min)
+		return(FALSE);
+	return (TRUE);
 }
 
 int	*ft_atoi_input(char **argv, int argc)
@@ -62,9 +64,10 @@ int	*ft_atoi_input(char **argv, int argc)
 	{
 		if (argv[j][0] == '.')
 			j++;
-		array[i] = ft_is_int(argv[j]);
-		if (array[i] == FALSE)
-			return (NULL);
+		if (ft_is_int(argv[j]) == FALSE)
+			printf("1");
+		else
+			array[i] = ft_atoll(argv[j]);
 		i++;
 		j++;
 	}
@@ -72,20 +75,19 @@ int	*ft_atoi_input(char **argv, int argc)
 	return (array);
 }
 
-int	ft_check_dup(char **argv, int argc)
+int	ft_check_dup(char **argv, int argc, t_data *data)
 {
-	int	*numlist;
 	int	i;
 	int	j;
 
-	numlist = ft_atoi_input(argv, argc);
+	data->num_list = ft_atoi_input(argv, argc);
 	i = 0;
-	while (numlist[i])
+	while (data->num_list[i])
 	{
 		j = 0;
-		while (numlist[j])
+		while (data->num_list[j])
 		{
-			if (numlist[j] == numlist[i] && j != i)
+			if (data->num_list[j] == data->num_list[i] && j != i)
 				return (FALSE);
 			j++;
 		}
