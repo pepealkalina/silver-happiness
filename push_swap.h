@@ -6,7 +6,7 @@
 /*   By: preina-g <preina-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 11:37:33 by preina-g          #+#    #+#             */
-/*   Updated: 2023/03/01 10:07:04 by preina-g         ###   ########.fr       */
+/*   Updated: 2023/03/02 15:33:39 by preina-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,9 @@
 
 typedef struct s_stack
 {
-	int					value;
-	int					pos;
+	int				value;
+	int				pos;
+	int				index;
 	struct s_stack	*next;
 	struct s_stack	*prev;
 }t_stack;

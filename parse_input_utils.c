@@ -6,7 +6,7 @@
 /*   By: preina-g <preina-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 11:37:05 by preina-g          #+#    #+#             */
-/*   Updated: 2023/03/01 18:03:38 by preina-g         ###   ########.fr       */
+/*   Updated: 2023/03/02 16:00:00 by preina-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ int	*ft_atoi_input(char **argv, int argc)
 		if (argv[j][0] == '.')
 			j++;
 		if (ft_is_int(argv[j]) == FALSE)
-			printf("1");
+			exit(write(1, "Error!", 6));
 		else
 			array[i] = ft_atoll(argv[j]);
 		i++;
@@ -88,7 +88,10 @@ int	ft_check_dup(char **argv, int argc, t_data *data)
 		while (data->num_list[j])
 		{
 			if (data->num_list[j] == data->num_list[i] && j != i)
+			{
+				printf("%i\n", data->num_list[j]);
 				return (FALSE);
+			}
 			j++;
 		}
 		i++;

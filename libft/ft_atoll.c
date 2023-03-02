@@ -6,7 +6,7 @@
 /*   By: preina-g <preina-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 11:28:41 by preina-g          #+#    #+#             */
-/*   Updated: 2023/02/21 11:29:31 by preina-g         ###   ########.fr       */
+/*   Updated: 2023/03/01 18:20:12 by preina-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static long long	ft_putnbr(const char *str, long long i)
 {
-	int	num;
+	long long	num;
 
 	num = 0;
 	while (str[i] <= '9' && str[i] >= '0')
