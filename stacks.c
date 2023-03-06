@@ -6,7 +6,7 @@
 /*   By: preina-g <preina-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 15:27:14 by preina-g          #+#    #+#             */
-/*   Updated: 2023/02/22 12:35:27 by preina-g         ###   ########.fr       */
+/*   Updated: 2023/03/06 12:09:13 by preina-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,6 @@ t_stack	*ft_fill_stack(t_data *data, t_stack *stack)
 		i++;
 	i--;
 	stack->value = data->num_list[i];
-	stack->pos = 0;
 	i--;
 	j = 1;
 	while (i >= 0)

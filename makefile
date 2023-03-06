@@ -6,7 +6,7 @@
 #    By: preina-g <preina-g@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/31 15:13:40 by preina-g          #+#    #+#              #
-#    Updated: 2023/03/01 17:55:41 by preina-g         ###   ########.fr        #
+#    Updated: 2023/03/06 11:29:12 by preina-g         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = push_swap
 
 LIBFT = libft/libft.a
 
-SRC = main.c parse_input.c parse_input_utils.c push_swap_main.c stacks.c
+SRC = main.c parse_input.c parse_input_utils.c push_swap_main.c stacks.c set_index.c
 
 OBJ = $(SRC:.c=.o)
 

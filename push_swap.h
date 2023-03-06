@@ -6,7 +6,7 @@
 /*   By: preina-g <preina-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 11:37:33 by preina-g          #+#    #+#             */
-/*   Updated: 2023/03/02 15:33:39 by preina-g         ###   ########.fr       */
+/*   Updated: 2023/03/06 11:30:52 by preina-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,6 @@ int		ft_check_dup(char **argv, int argc, t_data *data);
 void	ft_split_argv(char *argv, t_data *data);
 int		push_swap_main(t_data *data);
 t_stack	*ft_fill_stack(t_data *data, t_stack *stack);
+void	ft_set_index(t_stack *stack);
 
 #endif
