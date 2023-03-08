@@ -6,7 +6,7 @@
 /*   By: preina-g <preina-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/02 16:13:30 by preina-g          #+#    #+#             */
-/*   Updated: 2023/03/06 13:13:24 by preina-g         ###   ########.fr       */
+/*   Updated: 2023/03/08 11:34:16 by preina-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,19 +28,18 @@ int	ft_set_index_init(t_stack *stack)
 
 int	ft_set_min(t_stack *stack)
 {
-	int	min;
+	long	min;
 
-	min = stack->value;
+	min = 2147483647;
 	while (stack != NULL)
 	{
 		if (min > stack->value && stack->index == -1)
 		{
-			printf("index -> %i\n", stack->index);
 			min = stack->value;
 		}
 		stack = stack->next;
 	}
-	printf("min -> %i\n", min);
+	//printf("index -> %i\n", stack->index);
 	return (min);
 }
 
@@ -55,7 +54,7 @@ int	ft_set_max(t_stack *stack)
 			max = stack->value;
 		stack = stack->next;
 	}
-	printf("max -> %i\n", max);
+	//printf("index -> %i\n", stack->index);
 	return (max);
 }
 
@@ -80,7 +79,7 @@ void	ft_set_index(t_stack *stack)
 	len = ft_set_index_init(stack);
 	while (index < len)
 	{
-		ft_set_min_index(stack, ft_set_min(stack), 3);
+		ft_set_min_index(stack, ft_set_min(stack), index);
 		index++;
 	}
 	ft_set_min_index(stack, ft_set_max(stack), index);

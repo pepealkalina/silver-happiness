@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap_main.c                                   :+:      :+:    :+:   */
+/*   moves1.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: preina-g <preina-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/15 13:03:01 by preina-g          #+#    #+#             */
-/*   Updated: 2023/03/08 11:20:49 by preina-g         ###   ########.fr       */
+/*   Created: 2023/03/08 12:06:25 by preina-g          #+#    #+#             */
+/*   Updated: 2023/03/08 13:52:43 by preina-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	push_swap_main(t_data *data)
+void	swap(t_stack *stack)
 {
-	t_stack	*stack_a;
+	int	temp;
 
-	stack_a = NULL;
-	stack_a = ft_fill_stack(data, stack_a);
-	ft_set_index(stack_a);
-	while (stack_a)
-	{
-		printf("final %i -> %i\n",stack_a->value, stack_a->index);
-		stack_a = stack_a->next;
-	}
-	return (0);
+	if (!stack || stack->next)
+		return ;
+	temp = stack->value;
+	stack->value = stack->next->value;
+	stack->next->value = temp;
+	temp = stack->index;
+	stack->index = stack->next->index;
+	stack->next->index = temp;
+}
+
+void	rotate(t_stack **stack)
+{
+	
 }

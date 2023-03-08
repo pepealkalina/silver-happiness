@@ -6,7 +6,7 @@
 /*   By: preina-g <preina-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 15:27:14 by preina-g          #+#    #+#             */
-/*   Updated: 2023/03/06 12:09:13 by preina-g         ###   ########.fr       */
+/*   Updated: 2023/03/07 13:56:28 by preina-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ t_stack	*new_node(t_stack *stack)
 	stack = (t_stack *)malloc(sizeof(t_stack));
 	if (!stack)
 		return (NULL);
+	stack->next = NULL;
 	return (stack);
 }
 
@@ -25,12 +26,11 @@ void	add_int(t_stack *stack, int value, int pos)
 	t_stack	*current;
 
 	current = stack;
-	while (current->next != NULL)
+	while (current->next)
 		current = current->next;
 	current->next = new_node(current->next);
 	current->next->value = value;
 	current->next->pos = pos;
-	current->next->next = NULL;
 }
 
 t_stack	*ft_fill_stack(t_data *data, t_stack *stack)
