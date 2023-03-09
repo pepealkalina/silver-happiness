@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap_main.c                                   :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: preina-g <preina-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/15 13:03:01 by preina-g          #+#    #+#             */
-/*   Updated: 2023/03/09 17:07:25 by preina-g         ###   ########.fr       */
+/*   Created: 2023/03/09 11:10:26 by preina-g          #+#    #+#             */
+/*   Updated: 2023/03/09 16:24:55 by preina-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	push_swap_main(t_data *data)
+t_stack	*ft_last_node(t_stack *stack)
 {
-	t_stack	*stack_a;
-	t_stack	*stack_b;
+	if (!stack)
+		return (NULL);
+	while (stack->next)
+		stack = stack->next;
+	return (stack);
+}
 
-	stack_a = NULL;
-	stack_b = NULL;
-	stack_a = ft_fill_stack(data, stack_a);
-	ft_set_index(stack_a);
-	push(&stack_a, &stack_b);
-	while (stack_a)
-	{
-		printf("final a value %i -> index %i -- final b value %i -> index %i\n", stack_a->value, stack_a->index, stack_b->value, stack_b->index);
-		stack_a = stack_a->next;
-	}
-	return (0);
+t_stack	*ft_before_last_node(t_stack *stack)
+{
+	if (!stack)
+		return (NULL);
+	while (stack->next && stack->next->next)
+		stack = stack->next;
+	return (stack);
 }

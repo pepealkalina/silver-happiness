@@ -6,7 +6,7 @@
 /*   By: preina-g <preina-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 11:37:33 by preina-g          #+#    #+#             */
-/*   Updated: 2023/03/08 12:42:30 by preina-g         ###   ########.fr       */
+/*   Updated: 2023/03/09 17:05:48 by preina-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,11 @@ void	ft_split_argv(char *argv, t_data *data);
 int		push_swap_main(t_data *data);
 t_stack	*ft_fill_stack(t_data *data, t_stack *stack);
 void	ft_set_index(t_stack *stack);
+t_stack	*ft_last_node(t_stack *stack);
+t_stack	*ft_before_last_node(t_stack *stack);
+void	rotate(t_stack **stack);
+void	swap(t_stack *stack);
+void	reverse_rotate(t_stack **stack);
+void	push(t_stack **stack_a, t_stack **stack_b);
 
 #endif
