@@ -6,7 +6,7 @@
 /*   By: preina-g <preina-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 13:03:01 by preina-g          #+#    #+#             */
-/*   Updated: 2023/03/13 11:24:45 by preina-g         ###   ########.fr       */
+/*   Updated: 2023/03/13 13:17:33 by preina-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,8 @@ int	push_swap_main(t_data *data)
 	stack_b = NULL;
 	stack_a = ft_fill_stack(data, stack_a);
 	ft_set_index(stack_a);
-	print_list_s(stack_a);
+	//print_list_s(stack_a);
 	ft_sort_three(&stack_a);
-	print_list_f(stack_a);
+	//print_list_f(stack_a);
 	return (0);
 }
