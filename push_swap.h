@@ -6,7 +6,7 @@
 /*   By: preina-g <preina-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 11:37:33 by preina-g          #+#    #+#             */
-/*   Updated: 2023/03/09 17:05:48 by preina-g         ###   ########.fr       */
+/*   Updated: 2023/03/13 11:44:06 by preina-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,10 @@ typedef struct s_stack
 	int				value;
 	int				pos;
 	int				index;
+	int				target_pos;
+	int				cost_a;
+	int				cost_b;
 	struct s_stack	*next;
-	struct s_stack	*prev;
 }t_stack;
 
 typedef enum e_bool
@@ -56,5 +58,7 @@ void	rotate(t_stack **stack);
 void	swap(t_stack *stack);
 void	reverse_rotate(t_stack **stack);
 void	push(t_stack **stack_a, t_stack **stack_b);
+void	ft_sort_three(t_stack **stack);
+void	ft_reset_pos(t_stack *stack);
 
 #endif

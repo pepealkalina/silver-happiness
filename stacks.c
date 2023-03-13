@@ -6,7 +6,7 @@
 /*   By: preina-g <preina-g@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 15:27:14 by preina-g          #+#    #+#             */
-/*   Updated: 2023/03/07 13:56:28 by preina-g         ###   ########.fr       */
+/*   Updated: 2023/03/13 11:37:04 by preina-g         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,22 +37,22 @@ t_stack	*ft_fill_stack(t_data *data, t_stack *stack)
 {
 	int	i;
 	int	j;
+	int	len;
 
 	stack = new_node(stack);
 	if (stack == NULL)
 		return (NULL);
-	i = 0;
-	while (data->num_list[i])
-		i++;
-	i--;
-	stack->value = data->num_list[i];
-	i--;
+	len = 0;
+	while (data->num_list[len])
+		len++;
+	stack->value = data->num_list[0];
+	i = 1;
 	j = 1;
-	while (i >= 0)
+	while (i < len)
 	{
 		add_int(stack, data->num_list[i], j);
 		j++;
-		i--;
+		i++;
 	}
 	return (stack);
 }
